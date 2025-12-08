@@ -1,9 +1,18 @@
-#include <stdio.h>
-#include <unistd.h>
-#include "libft.h"
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alfiorav <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/08 13:35:28 by alfiorav          #+#    #+#             */
+/*   Updated: 2025/12/08 13:35:28 by alfiorav         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_putnbr_fd(int nb, int fd)
+#include "libft.h"
+
+void	ft_putnbr_fd(int nb, int fd)
 {
 	if (nb == -2147483648)
 	{

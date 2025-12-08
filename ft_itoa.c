@@ -1,6 +1,16 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alfiorav <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/08 11:19:33 by alfiorav          #+#    #+#             */
+/*   Updated: 2025/12/08 13:28:15 by alfiorav         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <stdlib.h>
 
 int	count_nbr(int n)
 {
@@ -24,8 +34,8 @@ int	count_nbr(int n)
 
 char	*ft_itoa(int n)
 {
-	int	i;
-	int	nb;
+	int		i;
+	int		nb;
 	char	*nbr;
 
 	if (n == 0)

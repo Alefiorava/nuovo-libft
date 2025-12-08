@@ -1,8 +1,18 @@
-#include <stdio.h>
-#include "libft.h"
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alfiorav <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/08 13:38:14 by alfiorav          #+#    #+#             */
+/*   Updated: 2025/12/08 13:38:14 by alfiorav         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/* int	is_word(char s, char *set)
+#include "libft.h"
+
+int	is_word(char s, char *set)
 {
 	int	i;
 
@@ -57,9 +67,9 @@ int	find_top(char const *s1, char const *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*s;
-	int	i;
-	int	end;
-	int	start;
+	int		i;
+	int		end;
+	int		start;
 
 	if (!s1 || !set)
 		return (0);
@@ -80,9 +90,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	}
 	return (s);
-} */
+}
 
-char	*ft_strtrim2(const char *s1, const char *set)
+/* char	*ft_strtrim(const char *s1, const char *set)
 {
 	size_t	top;
 	size_t	bottom;
@@ -103,7 +113,7 @@ char	*ft_strtrim2(const char *s1, const char *set)
 		i++;
 	}
 	return (str);
-}
+} */
 /* int	main (int argc, char **argv)
 {
 	if(argc == 3)
@@ -121,9 +131,8 @@ char	*ft_strtrim2(const char *s1, const char *set)
 	}
 } */
 
-int main (void)
+/* int main (void)
 {
 	char * i = ft_strtrim2("   xxxtripouille", "t x");
 	printf("%s\n", i);
-}
-
+} */

@@ -6,10 +6,9 @@
 /*   By: alfiorav <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 12:27:55 by alfiorav          #+#    #+#             */
-/*   Updated: 2025/12/04 12:27:56 by alfiorav         ###   ########.fr       */
+/*   Updated: 2025/12/08 12:04:02 by alfiorav         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
@@ -31,6 +30,7 @@ int	count_words(const char *str, char charset)
 	}
 	return (word);
 }
+
 void	free_arr(char **str, int pstr)
 {
 	while (pstr > 0)

@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alfiorav <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/08 13:34:37 by alfiorav          #+#    #+#             */
-/*   Updated: 2025/12/08 13:34:37 by alfiorav         ###   ########.fr       */
+/*   Created: 2025/12/08 13:33:31 by alfiorav          #+#    #+#             */
+/*   Updated: 2025/12/08 13:33:31 by alfiorav         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	unsigned long int	i;
+	t_list	*tmp;
 
-	i = 0;
-	while (i < n)
+	if (!del || !lst)
+		return ;
+	while (*lst)
 	{
-		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-		i++;
+		tmp = (*lst)->next;
+		del((*lst)->content);
+		free(*lst);
+		*lst = tmp;
 	}
-	return (dest);
 }
-
-/* int main(void)
-{
-	char dest[80] = "blablabla";
-	char src[80] = "pipopi";
-	
-	printf("dest prima: %s\n", dest);
-	ft_memcpy(dest, src, 4);
-	printf("dest dopo; %s\n", dest);
-} */

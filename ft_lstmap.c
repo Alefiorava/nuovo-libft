@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alfiorav <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/08 13:34:37 by alfiorav          #+#    #+#             */
-/*   Updated: 2025/12/08 13:34:37 by alfiorav         ###   ########.fr       */
+/*   Created: 2025/12/08 13:34:23 by alfiorav          #+#    #+#             */
+/*   Updated: 2025/12/08 13:34:23 by alfiorav         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	unsigned long int	i;
+	t_list	*p;
+	t_list	*new;
 
-	i = 0;
-	while (i < n)
+	p = 0;
+	while (lst)
 	{
-		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-		i++;
+		new = ft_lstnew(f(lst->content));
+		if (!new)
+		{
+			ft_lstclear(&new, del);
+			return (0);
+		}
+		ft_lstadd_back (&p, new);
+		lst = lst->next;
 	}
-	return (dest);
+	return (p);
 }
-
-/* int main(void)
-{
-	char dest[80] = "blablabla";
-	char src[80] = "pipopi";
-	
-	printf("dest prima: %s\n", dest);
-	ft_memcpy(dest, src, 4);
-	printf("dest dopo; %s\n", dest);
-} */

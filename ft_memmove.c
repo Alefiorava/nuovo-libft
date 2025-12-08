@@ -1,14 +1,23 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alfiorav <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/08 13:34:39 by alfiorav          #+#    #+#             */
+/*   Updated: 2025/12/08 13:34:40 by alfiorav         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned long int		i;
 	unsigned char			c[1024];
-	unsigned long int		j;
 
 	i = 0;
-	j = ft_strlen(((char *)src));
 	if (!dest && !src)
 		return (NULL);
 	while (i < n)

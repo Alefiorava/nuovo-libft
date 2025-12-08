@@ -1,4 +1,15 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alfiorav <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/08 13:39:21 by alfiorav          #+#    #+#             */
+/*   Updated: 2025/12/08 13:39:21 by alfiorav         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
@@ -9,7 +20,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (i != 0 && ((char *)s)[i] != (unsigned char)c)
 		i--;
 	if (s[i] == (unsigned char)c)
-			return ((char *)s + i);
+		return ((char *)s + i);
 	return (0);
 }
 
@@ -20,4 +31,3 @@ char	*ft_strrchr(const char *s, int c)
 		printf("%s", ft_strrchr(argv[1], argv[2][0]));
 	}
 } */
-
