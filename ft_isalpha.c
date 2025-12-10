@@ -6,7 +6,7 @@
 /*   By: alfiorav <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 11:19:16 by alfiorav          #+#    #+#             */
-/*   Updated: 2025/12/08 12:02:34 by alfiorav         ###   ########.fr       */
+/*   Updated: 2025/12/10 12:08:33 by alfiorav         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-/*
-int main(void)
+
+/* int main(void)
 {
 	unsigned char c = 's';
 	printf("%d\n", ft_isalpha(c));
-}*/
+} */

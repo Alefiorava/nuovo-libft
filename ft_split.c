@@ -6,7 +6,7 @@
 /*   By: alfiorav <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 12:27:55 by alfiorav          #+#    #+#             */
-/*   Updated: 2025/12/08 12:04:02 by alfiorav         ###   ########.fr       */
+/*   Updated: 2025/12/10 12:07:50 by alfiorav         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,8 +111,8 @@ char	**ft_split(const char *str, char charset)
 	trasfer_words(str, charset, split);
 	return (split);
 }
-/*
-int	main(void)
+
+/* int	main(void)
 {
 	char str[] = "ahbhs ,sjdagj,aasd aysugd ,asd";
 	char charset[] = {" ,"};
@@ -127,8 +127,8 @@ int	main(void)
 		printf("%s\n", split[i]);
 		i++;
 	}
-}
-*/
+} */
+
 
 /* int main(int argc, char **argv)
 {

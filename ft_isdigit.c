@@ -6,7 +6,7 @@
 /*   By: alfiorav <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 11:19:25 by alfiorav          #+#    #+#             */
-/*   Updated: 2025/12/08 12:02:39 by alfiorav         ###   ########.fr       */
+/*   Updated: 2025/12/10 12:07:36 by alfiorav         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-/*
-int main(void)
+
+/*int main(void)
 {
 	unsigned char c = '2';
 	printf("%d\n", ft_idigit(c));
